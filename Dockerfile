@@ -31,13 +31,14 @@ RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
 RUN echo "---> Installing application source 1"
-RUN cp -Rf /tmp/src/. ./
+RUN ENV
+##RUN cp -Rf /tmp/src/. ./
 #RUN cp -Rf /tmp/src/. /opt/app-root/src
 
-RUN echo "---> Building Spring Boot application from source"
+##RUN echo "---> Building Spring Boot application from source"
 
-RUN  mvn clean install
+##RUN  mvn clean install
 
-RUN echo "---> Starting Spring Boot application"
+##RUN echo "---> Starting Spring Boot application"
 
-ENTRYPOINT ["java","-jar","find target -name *.jar"]
+##ENTRYPOINT ["java","-jar","find target -name *.jar"]
