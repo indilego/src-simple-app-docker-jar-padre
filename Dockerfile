@@ -34,14 +34,9 @@ RUN echo "---> Installing application source 1"
 RUN cp -Rf /tmp/src/. ./
 
 RUN echo "---> Building Spring Boot application from source"
-if [ -f "mvnw" ]; then
-RUN  ./mvnw clean install
-else
+
 RUN  mvn clean install
-fi
 
 RUN echo "---> Starting Spring Boot application"
 
 ENTRYPOINT ["java","-jar","find target -name *.jar"]
-
- 
