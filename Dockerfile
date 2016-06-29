@@ -34,7 +34,7 @@ RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
-RUN echo "---> Installing application source 1"
+RUN echo "---> Installing application source 2"
 #RUN cp -Rf /tmp/src/. ./
 #RUN cp -Rf /tmp/src/. /opt/app-root/src
 
