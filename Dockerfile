@@ -32,7 +32,8 @@ USER 1001
 
 RUN echo "---> Installing application source 1"
 #RUN cp -Rf /tmp/src/. ./
-RUN cp -Rf /tmp/src/. /opt/app-root/src
+#RUN cp -Rf /tmp/src/. /opt/app-root/src
+
 RUN echo "---> Building Spring Boot application from source"
 
 RUN  mvn clean install
