@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @indilego
+ Unwatch 1
+  Star 0
+  Fork 0 indilego/src-simple-app-docker
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Tree: 68846077e4 Find file Copy pathsrc-simple-app-docker/Dockerfile
+6884607  an hour ago
+@indilego indilego Update Dockerfile
+1 contributor
+RawBlameHistory     44 lines (30 sloc)  1.3 KB
 # springboot-maven3-centos
 #
 # This image provide a base for running Spring Boot based applications. It
@@ -31,16 +47,23 @@ RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
 RUN echo "---> Installing application source 1"
-RUN ls -ltr
-RUN pwd
-RUN export
-##RUN cp -Rf /tmp/src/. ./
+#RUN cp -Rf /tmp/src/. ./
 #RUN cp -Rf /tmp/src/. /opt/app-root/src
 
-##RUN echo "---> Building Spring Boot application from source"
+RUN echo "---> Building Spring Boot application from source"
 
-##RUN  mvn clean install
+RUN  mvn clean install
 
-##RUN echo "---> Starting Spring Boot application"
+RUN echo "---> Starting Spring Boot application"
 
-##ENTRYPOINT ["java","-jar","find target -name *.jar"]
+ENTRYPOINT ["java","-jar","find target -name *.jar"]
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
+
+java
+ESPAÑOL
+Java
+sustantivo
+Java
+
+OPCIONES DE EXTENSIÓNMÁS »
