@@ -30,9 +30,7 @@ ENV MAVEN_HOME /usr/share/maven
 
 RUN git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
 RUN ls
-RUN cp -R /myapp/* /home/app/
-RUN chown app:app -R /home/app/
-
+RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
