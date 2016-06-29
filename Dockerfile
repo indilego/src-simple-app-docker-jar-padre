@@ -30,8 +30,6 @@ ENV MAVEN_HOME /usr/share/maven
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
-set -e
-
 echo "---> Installing application source"
 cp -Rf /tmp/src/. ./
 
