@@ -42,3 +42,4 @@ fi
 
 echo "---> Starting Spring Boot application"
 java -jar `find target -name *.jar`
+ 
