@@ -30,16 +30,18 @@ ENV MAVEN_HOME /usr/share/maven
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
-echo "---> Installing application source 1"
-cp -Rf /tmp/src/. ./
+RUN echo "---> Installing application source 1"
+RUN cp -Rf /tmp/src/. ./
 
-echo "---> Building Spring Boot application from source"
+RUN echo "---> Building Spring Boot application from source"
 if [ -f "mvnw" ]; then
-  ./mvnw clean install
+RUN  ./mvnw clean install
 else
-  mvn clean install
+RUN  mvn clean install
 fi
 
-echo "---> Starting Spring Boot application"
-java -jar `find target -name *.jar`
+RUN echo "---> Starting Spring Boot application"
+
+ENTRYPOINT ["java","-jar","find target -name *.jar"]
+
  
