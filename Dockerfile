@@ -31,7 +31,8 @@ RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
 RUN echo "---> Installing application source 1"
-RUN ENV
+RUN pwd
+RUN export
 ##RUN cp -Rf /tmp/src/. ./
 #RUN cp -Rf /tmp/src/. /opt/app-root/src
 
