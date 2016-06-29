@@ -30,7 +30,7 @@ ENV MAVEN_HOME /usr/share/maven
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
-echo "---> Installing application source"
+echo "---> Installing application source 1"
 cp -Rf /tmp/src/. ./
 
 echo "---> Building Spring Boot application from source"
