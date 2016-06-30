@@ -28,7 +28,7 @@ ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
 
-ADD git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
+ADD https://github.com/indilego/src-simple-app-docker.git /myapp/
 RUN ls
 RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
