@@ -27,7 +27,7 @@ RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bina
 ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
-ADD https://github.com/indilego/src-simple-app/archive/master.tar.gz /myapp/ | tar xvf
+ADD https://github.com/indilego/src-simple-app/archive/master.tar.gz | tar xvf
 RUN ls /myapp/
 CMD ls /myapp/
 RUN ls /opt/app-root/src
