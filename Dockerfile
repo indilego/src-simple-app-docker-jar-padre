@@ -28,6 +28,8 @@ ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
 ADD https://github.com/indilego/src-simple-app/archive/master.tar.gz /myapp/
+RUN ls /myapp/
+RUN ls /opt/app-root/src
 RUN tar -xJf /myapp/master.tar.gz -C /opt/app-root/src
 RUN ls /myapp/
 RUN ls /opt/app-root/src
