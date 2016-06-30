@@ -28,9 +28,9 @@ ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
 
-RUN echo '2014122400' >/dev/null && git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
-RUN ls /myapp/
-RUN cp -R /myapp/* /opt/app-root/src
+#RUN echo '2014122400' >/dev/null && git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
+RUN ls /opt/app-root/src
+#RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
