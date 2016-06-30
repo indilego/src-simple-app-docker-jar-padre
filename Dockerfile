@@ -29,7 +29,7 @@ ENV MAVEN_HOME /usr/share/maven
 
 
 ADD https://github.com/indilego/src-simple-app-docker.git /myapp/
-RUN ls
+RUN ls /myapp/
 RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
