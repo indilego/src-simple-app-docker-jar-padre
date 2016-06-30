@@ -45,11 +45,3 @@ RUN  mvn clean install
 RUN echo "---> Starting Spring Boot application"
 
 ENTRYPOINT ["java","-jar","target/app.jar"]
-
-RUN echo "---> Building Spring Boot application from source"
-
-RUN  mvn clean install
-
-RUN echo "---> Starting Spring Boot application"
-
-ENTRYPOINT ["java","-jar","target/app.jar"]
