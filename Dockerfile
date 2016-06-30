@@ -26,22 +26,3 @@ RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bina
 
 ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
-
-
-RUN git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
-RUN ls
-RUN cp -R /myapp/* /opt/app-root/src
-RUN chown -R 1001:0 /opt/app-root
-USER 1001
-
-RUN echo "---> Installing application source 2"
-#RUN cp -Rf /tmp/src/. ./
-#RUN cp -Rf /tmp/src/. /opt/app-root/src
-
-RUN echo "---> Building Spring Boot application from source"
-
-RUN  mvn clean install
-
-RUN echo "---> Starting Spring Boot application"
-
-ENTRYPOINT ["java","-jar","target/app.jar"]
