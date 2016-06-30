@@ -44,4 +44,4 @@ RUN  mvn clean install
 
 RUN echo "---> Starting Spring Boot application"
 
-ENTRYPOINT ["java","-jar","find target -name *.jar"]
+ENTRYPOINT ["java","-jar","target/app.jar"]
