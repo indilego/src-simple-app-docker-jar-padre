@@ -27,9 +27,13 @@ RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bina
 ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
-
-#RUN echo '2014122400' >/dev/null && git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
+ADD ttps://github.com/indilego/src-simple-app/archive/master.tar.gz /myapp/
+RUN tar -xJf /myapp/master.tar.gz -C /opt/app-root/src
+RUN ls /myapp/
 RUN ls /opt/app-root/src
+##ADD  curl -fsSL https://github.com/indilego/src-simple-app/archive/master.tar.gz | tar xzf - -C . && pwd && ls)
+#RUN echo '2014122400' >/dev/null && git clone https://github.com/indilego/src-simple-app-docker.git /myapp/
+#RUN ls /opt/app-root/src
 #RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
