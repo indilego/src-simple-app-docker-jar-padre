@@ -30,6 +30,7 @@ ENV MAVEN_HOME /usr/share/maven
 ADD https://github.com/indilego/src-simple-app/archive/master.tar.gz /myapp/
 RUN ls /myapp/
 RUN ls /opt/app-root/src
+RUN pwd
 RUN tar -xJf /myapp/master.tar.gz 
 RUN cp -R /myapp/* /opt/app-root/src
 RUN ls /myapp/
