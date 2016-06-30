@@ -31,7 +31,7 @@ ADD https://github.com/indilego/src-simple-app/archive/master.tar.gz /myapp/
 RUN ls /myapp/
 RUN ls /opt/app-root/src
 RUN pwd
-RUN tar -xJf /myapp/master.tar.gz 
+RUN tar -xJf /myapp/master.tar.gz -C .
 RUN cp -R /myapp/* /opt/app-root/src
 RUN ls /myapp/
 RUN ls /opt/app-root/src
