@@ -30,8 +30,8 @@ ENV MAVEN_HOME /usr/share/maven
 CMD cd  /opt/app-root/src && git pull https://github.com/indilego/src-simple-app-docker.git
 
 #ADD https://github.com/indilego/src-simple-app-docker/* /myapp/
-RUN ls /myapp/
-RUN cp -R /myapp/* /opt/app-root/src
+RUN ls /opt/app-root/src
+#RUN cp -R /myapp/* /opt/app-root/src
 RUN chown -R 1001:0 /opt/app-root
 USER 1001
 
