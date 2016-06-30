@@ -27,7 +27,7 @@ RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/bina
 ENV JAVA_HOME /usr/lib/jvm/java
 ENV MAVEN_HOME /usr/share/maven
 
-CMD cd  /opt/app-root/src && git clone https://github.com/indilego/src-simple-app-docker.git
+CMD git clone https://github.com/indilego/src-simple-app-docker.git /opt/app-root/src
 
 #ADD https://github.com/indilego/src-simple-app-docker/* /myapp/
 RUN ls /opt/app-root/src
