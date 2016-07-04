@@ -16,4 +16,6 @@ RUN yum update -y && \
   yum clean all
   
 RUN git clone https://github.com/indilego/src-simple-app-docker-jar-hijo.git /opt/app-root/src/git/
+
+RUN chown -R 1001:0 /opt/app-root/git/  
 #RUN cp -rT /myapp/* /opt/app-root/src/
