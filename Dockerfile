@@ -14,3 +14,5 @@ RUN yum update -y && \
   yum install -y curl && \
   yum install -y java-$JAVA_VERSION-openjdk java-$JAVA_VERSION-openjdk-devel && \
   yum clean all
+  
+RUN git clone https://github.com/indilego/src-simple-app-docker-jar-hijo.git /myapp/
