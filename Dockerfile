@@ -15,5 +15,5 @@ RUN yum update -y && \
   yum install -y java-$JAVA_VERSION-openjdk java-$JAVA_VERSION-openjdk-devel && \
   yum clean all
   
-RUN git clone https://github.com/indilego/src-simple-app-docker-jar-hijo.git /opt/app-root/src/
+RUN git clone https://github.com/indilego/src-simple-app-docker-jar-hijo.git /opt/app-root/src/git/
 #RUN cp -rT /myapp/* /opt/app-root/src/
